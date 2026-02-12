@@ -1,0 +1,296 @@
+title: プレイしたゲーム
+description: 自分がプレイしたゲームとその実績の一覧です。
+table:
+  categories:
+    - title: 東方project
+      games:
+        - game: 東方紅魔郷
+          achievesments:
+            - title: Lunatic普通クリア(全機体)
+            - title: Extraノーミスノーボム(魔理沙A)
+              movie: https://www.youtube.com/watch?v=6efoS52ELWM
+        - game: 東方妖々夢
+          achievesments:
+            - title: Lunatic25億(咲夜B)
+              movie: https://www.youtube.com/watch?v=ZYK8vgFHG6o
+            - title: Extraノーミスノーボムノー霊撃(魔理沙A)
+              movie: https://www.youtube.com/watch?v=NAzHf79DlOs
+            - title: Phantasmノーミスノーボムノー霊撃10.8億
+              movie: https://www.youtube.com/watch?v=lnQy7n1l4t0
+            - title: Lunatic普通クリア(全機体)
+        - game: 東方永夜抄
+          achievesments:
+            - title: Lunatic55億(幽冥組)
+              movie: https://www.youtube.com/watch?v=iWjzrJQPeqY
+            - title: Extra23.1億
+              movie: https://www.youtube.com/watch?v=RdfRuszAPGU
+            - title: Extraノーミスノーボム(結界組)
+              movie: https://www.youtube.com/watch?v=8Yj9gJXSwwE
+            - title: LunaticB√普通クリア(単騎含む全機体)
+        - game: 東方花映塚
+          achievesments:
+            - title: 特に頑張っていません。雑にLunaticクリアした程度。
+        - game: 東方文花帖
+          achievesments:
+            - title: Extraノーミスノーボム(霊夢A)
+              movie: https://www.youtube.com/watch?v=zTMzL_l4V7Q
+            - title: Lunatic普通クリア(全機体)
+        - game: 東方風神録
+          achievesments:
+            - title: Lunatic普通クリア(全機体)
+            - title: Extraノーミスノーボム(全機体)
+        - game: 黄昏酒場
+          achievesments:
+            - title: 823万(2025年3月現在全国1位)
+              movie: https://www.youtube.com/watch?v=e4ptap6U7J0
+            - title: ノーミスノーボム
+              movie: https://www.youtube.com/watch?v=EzZD-eNeQ2Q
+        - game: 東方地霊殿
+          achievesments:
+            - title: Lunatic40億(霊夢A)
+              movie: https://www.youtube.com/watch?v=mwozmJ-mPLE
+            - title: Extra10億(霊夢A)
+              movie: https://www.youtube.com/watch?v=7Tl-PaPx_d4
+            - title: Extraノーミスノーボム
+              movie: https://www.youtube.com/watch?v=G_3QCLfg1nk
+            - title: Lunatic普通クリア(全機体)
+        - game: 東方星蓮船
+          achievesments:
+            - title: Lunatic25億(早苗B)
+              movie: https://www.youtube.com/watch?v=AeGyveqk3Mk
+            - title: Lunaticノーミス(早苗B)
+              movie: https://www.youtube.com/watch?v=nBjCOiqJB3E
+            - title: Extraノーミスノーボム(早苗B)
+              movie: https://www.youtube.com/watch?v=KG0UYYNb58U
+            - title: Lunatic普通クリア(全機体)
+        - game: ダブルスポイラー
+          achievesments:
+            - title: 全シーン埋め(文/はたて)
+        - game: 妖精大戦争
+          achievesments:
+            - title: Extraノーミスノーボム
+              movie: https://www.youtube.com/watch?v=-UKHRUDqVBY
+            - title: Lunatic普通クリア(A2√)
+        - game: 東方神霊廟
+          achievesments:
+            - title: Lunatic36億(妖夢)
+            - title: Lunatic31億(魔理沙)
+            - title: Hard36億(妖夢)
+              movie: https://www.youtube.com/watch?v=kLrm6z22N7o
+            - title: Hard32億(魔理沙)
+            - title: Extra6億(魔理沙)
+              movie: https://www.youtube.com/watch?v=5Xf_o8KMy6k
+            - title: Lunaticノーミス全スペカ落とし(魔理沙)
+            - title: Extraノーミスノーボム(魔理沙)
+        - game: 東方輝針城
+          achievesments:
+            - title: Lunatic15億(魔理沙B)
+              movie: https://www.youtube.com/watch?v=T2qry8QoqAM
+            - title: Extra11億(魔理沙B)
+              movie: https://www.youtube.com/watch?v=7O3b0G4Tgwg
+            - title: Lunaticノーミスノーボム(咲夜A)
+              movie: https://www.youtube.com/watch?v=4XD5iCNPKDE
+            - title: Lunatic普通クリア(全機体)
+        - game: 弾幕アマノジャク
+          achievesments:
+            - title: 究極反則生命体
+        - game: 東方紺珠伝
+          achievesments:
+            - title: Lunatic25億(早苗)
+              movie: https://www.youtube.com/watch?v=mtaE4BIlPCQ
+            - title: Lunatic普通クリア(全機体)
+        - game: 東方天空璋
+          achievesments:
+            - title: Lunatic60億(文秋)
+              movie: https://www.youtube.com/watch?v=lsxZX2WEclg
+            - title: Extra10億(霊夢)
+              movie: https://www.youtube.com/watch?v=KMUXGF19OtQ
+            - title: Extraノーミスノーボムノー季節解放(霊夢)
+              movie: https://www.youtube.com/watch?v=-UtM_QzFrg8
+        - game: 秘封ナイトメアダイアリー(笑)
+          achievesments:
+            - title: とりま全シーン埋めた
+        - game: 東方鬼形獣
+          achievesments:
+            - title: Lunatic100億(魔理沙カワウソ)
+              movie: https://www.youtube.com/watch?v=wIjZurDmrjo
+        - game: 東方虹龍洞
+          achievesments:
+            - title: Lunatic100億(咲夜)
+              movie: https://www.youtube.com/watch?v=y0ztBdf13Nc
+        - game: バレットフィリア(笑)
+          achievesments:
+            - title: 買ってるはずなのに記憶がない
+        - game: 東方獣王園
+          achievesments:
+            - title: これも記憶がない
+        - game: 東方錦上京
+          achievesments:
+            - title: 一応霊夢魔理沙1機体ずつLunaticクリア
+    - title: CAVE
+      games:
+        - game: 虫姫さま
+          achievesments:
+            - title: ウルトラ普通ALL
+              movie: https://www.youtube.com/watch?v=eI3rNXq_COA
+        - game: 虫姫さまver1.5
+          achievesments:
+            - title: オリジナルMax普通ALL
+              movie: https://www.youtube.com/watch?v=ukACyxa8BxU
+            - title: マニアック普通ALL
+              movie: https://www.youtube.com/watch?v=S2RAqH1_uvY
+        - game: 虫姫さまふたり
+          achievesments:
+            - title: 初期残機MAX8000万エブリウルトラ普通ALL(アブノーマルパルム)
+              movie: https://www.youtube.com/watch?v=ri5rxvnRuq0
+        - game: 虫姫さまふたりBL
+          achievesments:
+            - title: ゴッドノーミス(レコ)
+              movie: https://www.youtube.com/watch?v=zhAwxfkiaCw
+            - title: ゴッド普通ALL(パルム)
+              movie: https://www.youtube.com/watch?v=c272AiZre0o
+        - game: デススマイルズ
+          achievesments:
+            - title: 3億(フォレット)
+              movie: https://www.youtube.com/watch?v=Fc0BvYF6KIo
+        - game: デススマイルズMBL
+          achievesments:
+            - title: 100億(サキュラ)
+              movie: https://www.youtube.com/watch?v=jya5T2_t8JE
+        - game: ケツイ
+          achievesments:
+            - title: 裏2周凸(A機体)
+              movie: https://www.youtube.com/watch?v=EjRnAX_m-rI
+            - title: 表2周ALL(A機体)
+              movie: https://www.youtube.com/watch?v=OR3ZgcgUkqI
+        - game: 怒首領蜂大往生
+          achievesments:
+            - title: 1周ALL(A-Ex)
+              movie: https://www.youtube.com/watch?v=OPdxab21ZrM
+        - game: 怒首領蜂大往生BL
+          achievesments:
+            - title: 1周モードALL(A-Ex)
+              movie: https://www.youtube.com/watch?v=REC3GyR6Mvc
+            - title: 2周モード2周ALL(A-Ex)
+              movie: https://www.youtube.com/watch?v=p71E_ncn-BI
+        - game: 赤い刀真
+          achievesments:
+            - title: アーケードSTGで初めてクリアしたゲーム(アイコンの理由)
+            - title: 71億(弐号機)
+              movie: https://www.youtube.com/watch?v=qYvLjH26_9E
+        - game: 赤い刀Exa
+          achievesments:
+            - title: 極モードALL(弐号機)
+        - game: 怒首領蜂
+          achievesments:
+            - title: 1周ALL
+        - game: 怒首領蜂大復活
+          achievesments:
+            - title: 裏2周ALL(全ストロング機体)
+        - game: 怒首領蜂大復活BL
+          achievesments:
+            - title: 1兆(緑ストロング)
+              movie: https://www.youtube.com/watch?v=VHMU3pNB6FQ
+            - title: ザツザ√ALL(緑ストロング)
+              movie: https://www.youtube.com/watch?v=BwpNWRUsL5U
+            - title: ヒバチ√ALL(赤パワー)
+              movie: https://www.youtube.com/watch?v=snce6nJG2sw
+        - game: 怒首領蜂最大往生
+          achievesments:
+            - title: 1周ALL(A-S)
+              movie: https://www.youtube.com/watch?v=2yimKsxAAeI
+        - game: 怒首領蜂最大往生Exa
+          achievesments:
+            - title: 1周ALL(咲夜)
+        - game: エスプレイド
+          achievesments:
+            - title: 1周ALL(全機体)
+        - game: エスプガルーダ
+          achievesments:
+            - title: 1周ALL(アゲハ)
+        - game: エスプガルーダII
+          achievesments:
+            - title: ノーミスALL(アサギ)
+              movie: https://www.youtube.com/watch?v=tWBX3v2Y180
+            - title: 1周ALL(全機体)
+        - game: むちむちポーク
+          achievesments:
+            - title: 1周ALL(イエロー)
+        - game: プロギアの嵐
+          achievesments:
+            - title: 1周ALL(B-β)
+        - game: 弾銃フィーバロン
+          achievesments:
+            - title: 1周ALL(TypeB-Roll)
+              movie: https://www.youtube.com/watch?v=fuVyzdDLYhg
+    - title: その他STG
+      games:
+        - game: バトルガレッガ
+          achievesments:
+            - title: 1700万(ガイン)
+              movie: https://www.youtube.com/watch?v=mqSObkSsOhU
+            - title: 1500万(ミヤモト)
+              movie: https://www.youtube.com/watch?v=elT1oGeuH4Y
+            - title: 1500万(ボーンナム)
+              movie: https://www.youtube.com/watch?v=PeORvlbmc64
+            - title: 1350万(チッタ)
+              movie: https://www.youtube.com/watch?v=_pn90gzxWbY
+            - title: 1000万over(全機体)
+        - game: バトルバクレイド
+          achievesments:
+            - title: 中級ALL
+        - game: バトライダー
+          achievesments:
+            - title: 上級ALL(ショーティC)
+        - game: 魔法大作戦
+          achievesments:
+            - title: 1周ALL(チッタ)
+              movie: https://www.youtube.com/watch?v=3ZDZV-JDAdc
+        - game: グレート魔法大作戦
+          achievesments:
+            - title: スコアカンスト(グリムレン)
+              movie: https://www.youtube.com/watch?v=dGwuP43gmHU
+        - game: レイディアントシルバーガン
+          achievesments:
+            - title: 1周ALL
+              movie: https://www.youtube.com/watch?v=zhs_wUnN3LQ
+        - game: 斑鳩
+          achievesments:
+            - title: ノーミス3080万ALL(斑鳩)
+              movie: https://www.youtube.com/watch?v=_L7FpVhH0Bg
+            - title: ハード2000万ALL(斑鳩)
+              movie: https://www.youtube.com/watch?v=cbl_Uakp5so
+            - title: 全面S++
+        - game: 連縁旡現里
+          achievesments:
+            - title: UnrealALL(ヤブサメ)
+            - title: ABEXALL(ヤブサメ)
+        - game: 連縁蛇叢釼
+          achievesments:
+            - title: UnrealALL(ツバクラ)
+              movie: https://www.youtube.com/watch?v=4CCU7puwg5I
+            - title: Hard真√ALL(ツバクラ)
+              movie: https://www.youtube.com/watch?v=fvFKLyDKek8
+        - game: 連縁霊烈傳
+          achievesments:
+            - title: ABEX ALL(栓抜き組)
+              movie: https://www.youtube.com/watch?v=0yAnU-XEFUA
+        - game: Danmakai
+          achievesments:
+            - title: 65億(ダイアナ) 2025年現在全国1位
+              movie: https://www.youtube.com/watch?v=Xx2fXgn9Mcg
+        - game: Refrain ~ prism memories
+          achievesments:
+            - title: Re-Extreme 105億(Tee)
+              movie: https://www.youtube.com/watch?v=wu9qNPHOIO8
+        - game: Hell Sinker.
+          achievesments:
+            - title: 真エンド(FOSSIL MAIDEN、MINOGAME、DEAD LIAR、散神無 )
+        - game: 式神の城Ⅱ
+          achievesments:
+            - title: 1周ALL(金大正弐式)
+    - title: それ以外
+      games:
+        - game: 山手線
+          achievesments:
+            - title: 1周ALL(徒歩)

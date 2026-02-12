@@ -1,0 +1,9 @@
+title: えるろだ
+description: |
+  旧ロイヤルフレアアップローダが嫌だったので作成。ロイヤルフレアくんUIゴミだしcgiだしperlのcrypt関数だしで嫌だったし。
+  とはいえ旧ロイヤルフレアが権力持っている都合上絶対に勝てないなと思ったので
+  東方の†権力者†に土下座靴舐め舐めしてpuresign.tokyoドメインで動かしてもらいました。
+  あとOSSとして他人からプルリクをもらうという良い経験をしました。
+image: /projects/l-uploader.webp
+url: https://l-uploader.puresign.tokyo
+tags: ["東方", "アップローダ"]

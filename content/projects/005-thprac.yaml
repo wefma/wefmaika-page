@@ -1,0 +1,15 @@
+title: thprac
+description: |
+  東方界隈のデファクトスタンダートな練習用ツールです。
+  README英語だけどまぁ海外ニキたちのプロダクトやしな…
+  と思ってたらよく見ると中国語訳があるのに日本語訳だけなくてお前さぁと思いつつ対応
+  当然thpracリポジトリにpushする権限ないのでpatchファイル作成してissueで投げると
+  30分もしないうちにmasterにマージされました！
+  そんな即座に対応してくれていいんですか！？ありがとうです！！！！
+
+  あと関係ないけどmasterって名前のブランチ名でいいんですか？
+  masterは奴隷制を想起させるから嫌だ！って言い始めたの英語圏だと思うので(偏見)
+  英語圏がそこらへん緩かったらなんで日本語圏もmaster->main化対応してるんだってなってしまいます…
+image: /projects/thprac.webp
+url: https://github.com/touhouworldcup/thprac/blob/master/README_JP.md
+tags: ["東方", "練習ツール", "翻訳", "contributor"]
