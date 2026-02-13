@@ -5,8 +5,15 @@ import { findPageBreadcrumb } from "@nuxt/content/utils";
 
 const route = useRoute();
 
-const { data: page } = await useAsyncData(route.path, () =>
-  queryCollection("blog").path(route.path).first(),
+const normalizedPath = computed(() => {
+  // 末尾スラッシュを除去（"/" だけは残す）
+  const p = route.path.replace(/\/+$/, "");
+  return p === "" ? "/" : p;
+});
+
+const { data: page } = await useAsyncData(
+  () => `blog:${normalizedPath.value}`,
+  () => queryCollection("blog").path(normalizedPath.value).first(),
 );
 if (!page.value)
   throw createError({
@@ -14,10 +21,12 @@ if (!page.value)
     statusMessage: "Page not found",
     fatal: true,
   });
-const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-  queryCollectionItemSurroundings("blog", route.path, {
-    fields: ["description"],
-  }),
+const { data: surround } = await useAsyncData(
+  () => `blog:${normalizedPath.value}:surround`,
+  () =>
+    queryCollectionItemSurroundings("blog", normalizedPath.value, {
+      fields: ["description"],
+    }),
 );
 
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
