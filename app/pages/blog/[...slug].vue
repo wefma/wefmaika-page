@@ -58,11 +58,15 @@ useSeoMeta({
 const articleLink = computed(() => `${window?.location}`);
 
 const formatDate = (dateString: string) => {
-  return new Date(dateString).toLocaleDateString("ja", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
+  // 例: "2026-02-13" を想定（ISOでも先頭10文字を使う）
+  const s = dateString.slice(0, 10);
+  const m = s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!m) return dateString;
+
+  const y = Number(m[1]);
+  const mo = Number(m[2]);
+  const d = Number(m[3]);
+  return `${y}年${mo}月${d}日`;
 };
 </script>
 
