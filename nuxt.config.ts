@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/ui",
     "@nuxt/content",
+    "@nuxt/icon",
     "@vueuse/nuxt",
     "nuxt-og-image",
     "motion-v/nuxt",
