@@ -18,9 +18,9 @@ useHead({
 });
 
 useSeoMeta({
-  titleTemplate: "%s - Nuxt Portfolio Template",
-  ogImage: "https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png",
-  twitterImage: "https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png",
+  titleTemplate: "%s - Wefmaika Page",
+  ogImage: "/homepage.webp",
+  twitterImage: "/homepage.webp",
   twitterCard: "summary_large_image",
 });
 
