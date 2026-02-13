@@ -31,18 +31,16 @@ const breadcrumb = computed(() =>
   ).map(({ icon, ...link }) => link),
 );
 
-if (page.value.image) {
-  defineOgImage({ url: page.value.image });
-} else {
-  defineOgImageComponent(
-    "Blog",
-    {
-      headline: breadcrumb.value.map((item) => item.label).join(" > "),
-    },
-    {
-      fonts: ["Geist:400", "Geist:600"],
-    },
-  );
+if (import.meta.server) {
+  if (page.value.image) {
+    defineOgImage({ url: page.value.image });
+  } else {
+    defineOgImageComponent(
+      "Blog",
+      { headline: breadcrumb.value.map((i) => i.label).join(" > ") },
+      { fonts: ["Geist:400", "Geist:600"] },
+    );
+  }
 }
 
 const title = page.value?.seo?.title || page.value?.title;
@@ -58,7 +56,6 @@ useSeoMeta({
 const articleLink = computed(() => `${window?.location}`);
 
 const formatDate = (dateString: string) => {
-  // 例: "2026-02-13" を想定（ISOでも先頭10文字を使う）
   const s = dateString.slice(0, 10);
   const m = s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   if (!m) return dateString;
