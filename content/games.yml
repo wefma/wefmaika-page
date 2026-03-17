@@ -289,6 +289,10 @@ table:
         - game: 式神の城Ⅱ
           achievesments:
             - title: 1周ALL(金大正弐式)
+        - game: カラス
+          achievesments:
+            - title: 真ボスALL
+              movie: https://youtu.be/vjnvd0WjCuk
     - title: それ以外
       games:
         - game: 山手線
