@@ -29,3 +29,52 @@ minRead: 3
 つまり `show_level_scene` というbool変数を追加して、これによってテーブルの表示を制御すべきだ。
 
 あとは[過去の自分の黄昏酒場のプルリクエスト](https://github.com/n-rook/thscoreboard/pull/546)を見てれば書けると思った。
+
+追記：
+
+どこにlevel-sceneの情報を入れるか…
+
+```sql
+thscoreboard=# select * from replays_game;
+ game_id | has_replays | num_difficulties
+---------+-------------+------------------
+ th01    | f           |                4
+ th02    | f           |                5
+ th03    | f           |                5
+ th04    | f           |                5
+ th05    | f           |                5
+ th06    | t           |                5
+ th07    | t           |                6
+ th08    | t           |                5
+ th09    | t           |                5
+ th10    | t           |                5
+ th11    | t           |                5
+ th12    | t           |                5
+ th128   | t           |                5
+ th13    | t           |                6
+ th14    | t           |                5
+ th15    | t           |                5
+ th16    | t           |                5
+ th17    | t           |                5
+ th18    | t           |                5
+ th20    | t           |                5
+ alco    | t           |                0
+(21 rows)
+
+thscoreboard=# select * from replays_route;
+ id | route_id | order_number | game_id
+----+----------+--------------+---------
+  1 | Jigoku   |            0 | th01
+  2 | Makai    |            1 | th01
+  3 | Final A  |            0 | th08
+  4 | Final B  |            1 | th08
+  5 | A-1      |            0 | th128
+  6 | A-2      |            1 | th128
+  7 | B-1      |            2 | th128
+  8 | B-2      |            3 | th128
+  9 | C-1      |            4 | th128
+ 10 | C-2      |            5 | th128
+(10 rows)
+
+thscoreboard=#
+```
