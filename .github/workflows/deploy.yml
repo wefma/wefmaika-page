@@ -23,10 +23,26 @@ jobs:
           cache: "pnpm"
 
       # pnpm install
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+
+      # rebuild trusted native bindings without network
+      - run: |
+          uid="$(id -u)"
+          gid="$(id -g)"
+          sudo unshare --net --setuid "$uid" --setgid "$gid" -- sh -eu -c "
+            test \"\$(id -u)\" -ne 0
+            pnpm --config.ignore-scripts=false rebuild better-sqlite3 sharp
+          "
 
       # nuxt build
-      - run: pnpm exec nuxt build --preset github_pages
+      - run: |
+          uid="$(id -u)"
+          gid="$(id -g)"
+          sudo unshare --net --setuid "$uid" --setgid "$gid" -- sh -eu -c "
+            test \"\$(id -u)\" -ne 0
+            pnpm exec nuxt prepare
+            pnpm exec nuxt build --preset github_pages
+          "
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
