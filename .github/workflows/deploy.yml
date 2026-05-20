@@ -30,6 +30,7 @@ jobs:
           uid="$(id -u)"
           gid="$(id -g)"
           home="$HOME"
+          path="$PATH"
           xdg_cache_home="${XDG_CACHE_HOME:-$HOME/.cache}"
           corepack_home="${COREPACK_HOME:-$HOME/.cache/node/corepack}"
           node_dir="$(dirname "$(dirname "$(command -v node)")")"
@@ -37,13 +38,15 @@ jobs:
           sudo unshare --net --setuid "$uid" --setgid "$gid" -- \
             env \
               HOME="$home" \
+              PATH="$path" \
               XDG_CACHE_HOME="$xdg_cache_home" \
               COREPACK_HOME="$corepack_home" \
               npm_config_build_from_source=true \
               npm_config_nodedir="$node_dir" \
             sh -eu -c "
               test \"\$(id -u)\" -ne 0
-              pnpm --config.ignore-scripts=false rebuild better-sqlite3 sharp
+              node -v
+              pnpm --config.ignore-scripts=false rebuild better-sqlite3
             "
 
       # nuxt build
@@ -51,12 +54,14 @@ jobs:
           uid="$(id -u)"
           gid="$(id -g)"
           home="$HOME"
+          path="$PATH"
           xdg_cache_home="${XDG_CACHE_HOME:-$HOME/.cache}"
           corepack_home="${COREPACK_HOME:-$HOME/.cache/node/corepack}"
           sudo unshare --net --setuid "$uid" --setgid "$gid" -- \
-            env HOME="$home" XDG_CACHE_HOME="$xdg_cache_home" COREPACK_HOME="$corepack_home" \
+            env HOME="$home" PATH="$path" XDG_CACHE_HOME="$xdg_cache_home" COREPACK_HOME="$corepack_home" \
             sh -eu -c "
               test \"\$(id -u)\" -ne 0
+              node -v
               pnpm exec nuxt prepare
               pnpm exec nuxt build --preset github_pages
             "
