@@ -293,6 +293,10 @@ table:
           achievesments:
             - title: 真ボスALL
               movie: https://youtu.be/vjnvd0WjCuk
+        - game: レイフォース
+          achievesments:
+            - title: 普通ALL
+              movie: https://www.youtube.com/watch?v=pDtLYo5MI2Y
     - title: それ以外
       games:
         - game: 山手線
