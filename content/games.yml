@@ -127,6 +127,7 @@ table:
         - game: 東方錦上京
           achievesments:
             - title: Lunatic25億(魔理沙黄2)
+              movie: https://m.youtube.com/watch?v=wxfxYkkYnGM
     - title: CAVE
       games:
         - game: 虫姫さま
