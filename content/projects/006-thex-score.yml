@@ -8,5 +8,5 @@ description: |
   よって依頼人に全てを引き渡す工程が発生するのですが、他人に引き渡すうえで他人は信用ならないということでGithubActionsで本番環境へのマージに制限を付けてみました。
   観察してたらActionsが失敗してたりして、作ってよかったなという気持ちになってます。
 image: /projects/thex-score.webp
-url: https://thex-score.net
+url: https://balisman.github.io
 tags: ["東方", "練習ツール", "翻訳", "contributor"]
