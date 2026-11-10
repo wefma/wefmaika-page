@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getAbout, withBase } from "../lib/content";
+const page = getAbout();
+type AboutBlock =
+  | { type: "paragraph"; body: string }
+  | { type: "heading"; title: string; suffix: string; emphasized: boolean; body: string };
+const blocks: AboutBlock[] = page.content.split(/\n\s*\n/).map((block: string): AboutBlock => {
+  const match = block.match(/^### (.+)\n([\s\S]*)$/);
+  if (!match) return { type: "paragraph" as const, body: block };
+  const emphasis = match[1].match(/^\*(.+)\*(.*)$/);
+  return {
+    type: "heading" as const,
+    title: emphasis ? emphasis[1] : match[1],
+    suffix: emphasis?.[2] || "",
+    emphasized: Boolean(emphasis),
+    body: match[2],
+  };
+});
+---
+<BaseLayout title={page.seo?.title || page.title} description={page.seo?.description || page.description}>
+  <section class="hero" style="display:flex; align-items:center; gap:2rem">
+    <div><h1>{page.title}</h1><p>{page.description}</p></div>
+    <img class="avatar large" src={withBase("/global/ayame.webp")} alt="My profile picture" width="144" height="144" />
+  </section>
+  <section class="prose" style="margin-top:0">
+    {blocks.map((block) => block.type === "heading" ? <><h3>{block.emphasized ? <em>{block.title}</em> : block.title}{block.suffix}</h3><p>{block.body}</p></> : <p>{block.body}</p>)}
+  </section>
+  <div class="polaroids">
+    {page.images.map((image: { src: string; alt: string }) => <div class="polaroid"><img src={withBase(image.src)} alt={image.alt} loading="lazy" width="128" height="128" /><span>{image.alt}</span></div>)}
+  </div>
+</BaseLayout>

@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getBlogPage, withBase } from "../../lib/content";
+import { formatDate, getPosts } from "../../lib/posts";
+const page = getBlogPage();
+const posts = await getPosts();
+---
+<BaseLayout title={page.seo?.title || page.title} description={page.seo?.description || page.description}>
+  <section class="hero"><h1>{page.title}</h1><p>{page.description}</p></section>
+  <section class="section"><div class="card-list">
+    {posts.map((post) => <article class="post-card fade-in"><a href={withBase(`/blog/${post.slug}`)}><img src={withBase(post.image)} alt={post.title} loading="lazy" width="640" height="320" /></a><div class="card-copy"><small style="color:var(--muted)">{formatDate(post.date)}</small><h3><a href={withBase(`/blog/${post.slug}`)}>{post.title}</a></h3><p>{post.description}</p><a class="link-primary" href={withBase(`/blog/${post.slug}`)}>Read Article</a></div></article>)}
+  </div></section>
+</BaseLayout>

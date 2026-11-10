@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getGames, getGamesPage, withBase } from "../lib/content";
+const page = getGamesPage();
+const games = getGames();
+---
+<BaseLayout title={page.seo?.title || page.title} description={page.seo?.description || page.description}>
+  <section class="hero"><h1>{page.title}</h1><p>{page.description}</p></section>
+  <section class="section"><h2>代表的なやつ</h2><div class="card-list">
+    {games.map((game, index) => <article class:list={["feature-card", "fade-in", { reverse: index % 2 === 1 }]}>
+      <img src={withBase(game.image)} alt={game.title} loading="lazy" width="640" height="320" />
+      <div class="card-copy"><h3>{game.title}</h3><p>{game.description}</p></div>
+    </article>)}
+  </div></section>
+  <section class="section"><h2>その他雑多</h2>
+    {(page.table?.categories || []).map((category: any) => <div style="margin-top:2.5rem"><h3>{category.title}</h3><div class="table-wrap"><table class="game-table"><thead><tr><th>Game</th><th>Achievement</th><th>Movie</th></tr></thead><tbody>
+      {category.games.map((game: any) => game.achievesments?.length ? game.achievesments.map((achievement: any, index: number) => <tr>
+        {index === 0 && <td rowspan={game.achievesments.length}>{game.game}</td>}
+        <td>{achievement.title}</td>
+        <td>{achievement.movie && <a class="link-primary" href={achievement.movie} target="_blank" rel="noopener noreferrer">Watch</a>}</td>
+      </tr>) : <tr><td>{game.game}</td><td>-</td><td></td></tr>)}
+    </tbody></table></div></div>)}
+  </section>
+</BaseLayout>

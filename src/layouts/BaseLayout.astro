@@ -1,0 +1,53 @@
+---
+import "../styles/global.css";
+import Icon from "../components/Icon.astro";
+import Search from "../components/Search.astro";
+import { footerLinks, navLinks, withBase } from "../lib/content";
+import { getPosts } from "../lib/posts";
+
+const { title = "Wefmaika Page", description = "" } = Astro.props;
+const posts = await getPosts();
+const searchPosts = posts.map(({ slug, title, description }) => ({ slug, title, description }));
+---
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content={description} />
+    <link rel="icon" href={withBase("/favicon.ico")} />
+    <meta property="og:title" content={`${title} - Wefmaika Page`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={withBase("/homepage.webp")} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>{title} - Wefmaika Page</title>
+    <script is:inline>
+      const storedTheme = localStorage.getItem("theme");
+      if (storedTheme === "dark" || (!storedTheme && matchMedia("(prefers-color-scheme: dark)").matches)) document.documentElement.classList.add("dark");
+    </script>
+  </head>
+  <body>
+    <nav class="nav" aria-label="Main navigation">
+      {navLinks.map(([label, href]) => <a href={withBase(href)}>{label}</a>)}
+      <Search posts={searchPosts} />
+      <button class="icon-button" id="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme"><span class="theme-icon theme-icon-sun"><Icon name="sun" /></span><span class="theme-icon theme-icon-moon"><Icon name="moon" /></span></button>
+    </nav>
+    <main class="page-shell"><div class="content"><slot /></div></main>
+    <footer class="footer">
+      <span>Built with Astro • © {new Date().getFullYear()}</span>
+      <div class="footer-links">
+        {footerLinks.map(([label, href, ariaLabel]) => <a href={href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel} title={ariaLabel}><Icon name={label === "X" ? "x" : label === "YouTube" ? "youtube" : "github"} /></a>)}
+      </div>
+    </footer>
+    <script>
+      document.querySelector<HTMLButtonElement>("#theme-toggle")?.addEventListener("click", () => {
+        const apply = () => {
+          document.documentElement.classList.toggle("dark");
+          localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
+        };
+        if (document.startViewTransition) document.startViewTransition(apply); else apply();
+      });
+    </script>
+  </body>
+</html>
