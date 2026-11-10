@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getProjects, getProjectsPage, withBase } from "../lib/content";
+const page = getProjectsPage();
+const projects = getProjects();
+---
+<BaseLayout title={page.seo?.title || page.title} description={page.seo?.description || page.description}>
+  <section class="hero"><h1>{page.title}</h1><p>{page.description}</p></section>
+  <section class="section"><div class="card-list">
+    {projects.map((project, index) => <article class:list={["feature-card", { reverse: index % 2 === 1 }]}>
+      <a href={project.url} target="_blank" rel="noopener noreferrer"><img src={withBase(project.image)} alt={project.title} loading="lazy" width="640" height="320" /></a>
+      <div class="card-copy"><h3>{project.title}</h3><p>{project.description}</p><a class="link-primary" href={project.url} target="_blank" rel="noopener noreferrer">View Project</a></div>
+    </article>)}
+  </div></section>
+</BaseLayout>

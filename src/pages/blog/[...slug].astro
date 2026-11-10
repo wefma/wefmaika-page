@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { withBase } from "../../lib/content";
+import { formatDate, getPosts, type Post } from "../../lib/posts";
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props as { post: Post };
+const { Content } = post;
+const posts = await getPosts();
+const postIndex = posts.findIndex(({ slug }) => slug === post.slug);
+const newerPost = posts[postIndex - 1];
+const olderPost = posts[postIndex + 1];
+---
+<BaseLayout title={post.title} description={post.description}>
+  <a href={withBase("/blog")} style="font-size:.875rem">← Blog</a>
+  <div class="article-meta" style="margin-top:2rem"><span>{formatDate(post.date)}</span>{post.minRead && <><span> - </span><span>{post.minRead} MIN READ</span></>}</div>
+  <img class="article-image" src={withBase(post.image)} alt={post.title} width="960" height="300" />
+  <h1 class="article-title">{post.title}</h1>
+  <p class="article-description">{post.description}</p>
+  <article class="prose"><Content /></article>
+  <div style="display:flex; justify-content:flex-end"><button class="link-primary" id="copy-link">Copy link</button></div>
+  <nav class="article-surround" aria-label="Adjacent posts">
+    {newerPost ? <a href={withBase(`/blog/${newerPost.slug}`)}><span>← 新しい記事</span><strong>{newerPost.title}</strong></a> : <span></span>}
+    {olderPost ? <a href={withBase(`/blog/${olderPost.slug}`)} class="next"><span>古い記事 →</span><strong>{olderPost.title}</strong></a> : <span></span>}
+  </nav>
+  <script>
+    const copyButton = document.querySelector<HTMLButtonElement>("#copy-link");
+    copyButton?.addEventListener("click", async () => {
+      await navigator.clipboard.writeText(location.href);
+      copyButton.textContent = "Copied!";
+      setTimeout(() => { copyButton.textContent = "Copy link"; }, 1800);
+    });
+  </script>
+</BaseLayout>
