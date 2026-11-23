@@ -138,8 +138,14 @@ table:
             - title: これも記憶がない
         - game: 東方錦上京
           achievesments:
-            - title: Lunatic25億(魔理沙黄2)
-              movie: https://m.youtube.com/watch?v=wxfxYkkYnGM
+            - title: Lunatic25億(霊夢緑1)
+              movie: https://www.youtube.com/watch?v=OW0AfUyZAoI
+            - title: Lunatic25億(霊夢黄2)
+              movie: https://www.youtube.com/watch?v=K05h10Rbn7o
+            - title: Lunatic25億(魔理沙緑1)
+              movie: https://www.youtube.com/watch?v=XFlGxyJThO0
+            - title: Lunatic27億(魔理沙黄2)
+              movie: https://www.youtube.com/watch?v=R3csxwHXV0A
     - title: CAVE
       games:
         - game: 虫姫さま
