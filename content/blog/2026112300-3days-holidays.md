@@ -148,7 +148,7 @@ minRead: 3
 
 が、ミッドタウンが工事で休業でした。わろたね。
 
-[ggg]: https://www.dnpfcp.jp/gallery/ggg/
+[^ggg]: https://www.dnpfcp.jp/gallery/ggg/
 
 暇だったので六本木ヒルズのクリスマスマーケットにいった。
 シュトーレンがあったのでシュトーレンとグリューワイン(赤)を買ってみた
